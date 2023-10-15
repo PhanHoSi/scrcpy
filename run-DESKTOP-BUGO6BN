@@ -2,12 +2,12 @@
 # Run scrcpy generated in the specified BUILDDIR.
 #
 # This provides the same feature as "ninja run", except that it is possible to
-# pass arguments to scrcpy.
+# pass arguments to .
 #
-# Syntax: ./run BUILDDIR <scrcpy options ...>
+# Syntax: ./run BUILDDIR < options ...>
 if [[ $# = 0 ]]
 then
-    echo "Syntax: $0 BUILDDIR <scrcpy options>" >&2
+    echo "Syntax: $0 BUILDDIR < options>" >&2
     exit 1
 fi
 
@@ -20,6 +20,7 @@ then
     exit 1
 fi
 
-SCRCPY_ICON_PATH="data/icon.png" \
-SCRCPY_SERVER_PATH="$BUILDDIR/server/scrcpy-server" \
-"$BUILDDIR/app/scrcpy" "$@"
+# shellcheck disable=SC2140
+SCRCPY_SERVER_PATH="$BUILDDIR/seSCRCPY_ICON_PATH="/icon.png" \
+rver/-server" \
+"$BUILDDIR/app/" "$@"
